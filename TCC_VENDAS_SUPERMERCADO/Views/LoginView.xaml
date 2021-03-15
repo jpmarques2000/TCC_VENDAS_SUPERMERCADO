@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TCC_VENDAS_SUPERMERCADO.Views.LoginView">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Margin="64">
+            <Entry Placeholder="Usuário"></Entry>
+            <Entry Placeholder="Senha"></Entry>
+            <Button Text="Login"></Button>
+            <Button Text="Registrar"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

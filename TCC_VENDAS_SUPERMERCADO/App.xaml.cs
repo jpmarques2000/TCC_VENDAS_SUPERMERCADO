@@ -1,4 +1,5 @@
 ﻿using System;
+using TCC_VENDAS_SUPERMERCADO.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace TCC_VENDAS_SUPERMERCADO
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new LoginView();
         }
 
         protected override void OnStart()
