@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TCC_VENDAS_SUPERMERCADO.Views.ConsultaProdutosView">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="TCC_VENDAS_SUPERMERCADO.Views.ConsultaProdutosView"
+             Title="Produtos">
+
+
+    <StackLayout Margin="25">
+        <Button Text="Meu Carrinho" HorizontalOptions="Center" VerticalOptions="EndAndExpand"></Button>
+    </StackLayout>
 </ContentPage>
