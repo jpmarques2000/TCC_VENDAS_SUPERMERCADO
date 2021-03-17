@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace TCC_VENDAS_SUPERMERCADO.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MasterDetailView : MasterDetailPage
+    public partial class ConsultaProdutosView : ContentPage
     {
-        public MasterDetailView()
+        public ConsultaProdutosView()
         {
             InitializeComponent();
         }
