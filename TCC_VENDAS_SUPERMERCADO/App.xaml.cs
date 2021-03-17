@@ -20,8 +20,8 @@ namespace TCC_VENDAS_SUPERMERCADO
             MessagingCenter.Subscribe<Usuario>(this, "SucessoLogin",
                 (usuario) =>
                 {
-                      MainPage = new NavigationPage(new ConsultaProdutosView());
-                   // MainPage = new MasterDetailView();
+                      // MainPage = new NavigationPage(new ConsultaProdutosView());
+                      MainPage = new MasterDetailView();
                 });
         }
 
