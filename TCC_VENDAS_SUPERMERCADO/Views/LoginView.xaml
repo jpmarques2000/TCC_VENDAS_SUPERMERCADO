@@ -6,7 +6,7 @@
         <StackLayout VerticalOptions="Center" Margin="64">
             <Entry Placeholder="Usuário"></Entry>
             <Entry Placeholder="Senha"></Entry>
-            <Button Text="Login"></Button>
+            <Button Text="Login" Clicked="Button_Clicked"></Button>
             <Button Text="Registrar"></Button>
         </StackLayout>
     </ContentPage.Content>

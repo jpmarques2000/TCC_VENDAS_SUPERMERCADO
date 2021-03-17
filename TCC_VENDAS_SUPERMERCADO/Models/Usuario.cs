@@ -17,5 +17,11 @@ namespace TCC_VENDAS_SUPERMERCADO.Models
         public string bairro { get; set; }
         public string numero { get; set; }
 
+        public class ResultadoLogin
+        {
+            public Usuario usuario { get; set; }
+
+        }
+
     }
 }
