@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TCC_VENDAS_SUPERMERCADO.Views.MasterView"
              Title = "Perfil">
-    <TabbedPage.Children>
-        <ContentPage Title="Usuario">
+    <ContentPage Title="Usuario">
             <Frame OutlineColor ="Silver"
            VerticalOptions="CenterAndExpand"
            Margin="15">
@@ -13,12 +12,11 @@
                     <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="Fill"></BoxView>
                     <Label Text="Email"></Label>
                     <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="Fill"></BoxView>
-                    <Button Text="Perfil">
+                    <Button Text="Perfil" Command="{Binding EditarPerfilCommand}">
                     </Button>
                     <Button Text="Meus Pedidos"></Button>
                     <Button Text="Teste blablabal"></Button>
                 </StackLayout>
             </Frame>
         </ContentPage>
-    </TabbedPage.Children>
 </TabbedPage>
