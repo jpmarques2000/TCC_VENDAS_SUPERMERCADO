@@ -3,20 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TCC_VENDAS_SUPERMERCADO.Views.MasterView"
              Title = "Perfil">
-    <ContentPage Title="Usuario">
-            <Frame OutlineColor ="Silver"
+    <ContentPage Title="Menu">
+        <Frame OutlineColor ="Silver"
            VerticalOptions="CenterAndExpand"
            Margin="15">
-                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                    <Label Text="Nome"></Label>
-                    <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="Fill"></BoxView>
-                    <Label Text="Email"></Label>
-                    <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="Fill"></BoxView>
-                    <Button Text="Perfil" Command="{Binding EditarPerfilCommand}">
-                    </Button>
-                    <Button Text="Meus Pedidos"></Button>
-                    <Button Text="Teste blablabal"></Button>
-                </StackLayout>
-            </Frame>
-        </ContentPage>
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <Button Text="Perfil" Command="{Binding EditarPerfilCommand}"></Button>
+                <Button Text="Meus Pedidos" Command="{Binding MeusPedidoCommand}"></Button>
+                <Button Text="Carrinho" Command="{Binding MeuCarrinhoCommand}"></Button>
+            </StackLayout>
+        </Frame>
+    </ContentPage>
 </TabbedPage>

@@ -11,6 +11,8 @@ namespace TCC_VENDAS_SUPERMERCADO.ViewModels
     {
         private readonly Usuario usuario;
         private ICommand EditarPerfilCommand { get; set; }
+        private ICommand MeusPedidoCommand { get; set; }
+        private ICommand MeuCarrinhoCommand { get; set; }
 
         public MasterViewModel(Usuario usuario)
         {
@@ -23,6 +25,16 @@ namespace TCC_VENDAS_SUPERMERCADO.ViewModels
             EditarPerfilCommand = new Command(() =>
             {
                 MessagingCenter.Send<Usuario>(usuario, "EditarPerfil");
+            });
+
+            MeusPedidoCommand = new Command(() =>
+            {
+                MessagingCenter.Send<Usuario>(usuario, "MeusPedidos");
+            });
+
+            MeuCarrinhoCommand = new Command(() =>
+            {
+                MessagingCenter.Send<Usuario>(usuario, "MeuCarrinho");
             });
         }
     }
