@@ -34,11 +34,30 @@ namespace TCC_VENDAS_SUPERMERCADO.Views
                         new PerfilUsuarioView());
                     this.IsPresented = false;
                 });
+
+            MessagingCenter.Subscribe<Usuario>(this, "MeusPedidos",
+                (usuario) =>
+                {
+                    this.Detail = new NavigationPage(
+                        new MeusPedidosView());
+                    //  this.IsPresented = false;
+                });
+
+            MessagingCenter.Subscribe<Usuario>(this, "MeuCarrinho",
+                (usuario) =>
+                {
+                    this.Detail = new NavigationPage(
+                        new CarrinhoView());
+                    this.IsPresented = false;
+                });
+
         }
 
         private void CancelarAssinaturas()
         {
             MessagingCenter.Unsubscribe<Usuario>(this, "EditarPerfil");
+            MessagingCenter.Unsubscribe<Usuario>(this, "MeusPedidos");
+            MessagingCenter.Unsubscribe<Usuario>(this, "MeuCarrinho");
         }
 
         protected override void OnDisappearing()
