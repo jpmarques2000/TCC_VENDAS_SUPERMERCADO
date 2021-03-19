@@ -15,6 +15,13 @@ namespace TCC_VENDAS_SUPERMERCADO.Views
         public ConsultaProdutosView()
         {
             InitializeComponent();
+
+            List<String> produtos = new List<string>()
+            {
+                "PRODUTO01","PRODUTO02","PRODUTO03","PRODUTO04","PRODUTO05"
+            };
+            lv1.ItemsSource = produtos;
+            
         }
     }
 }
