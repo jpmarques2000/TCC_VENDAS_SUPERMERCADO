@@ -20,5 +20,20 @@ namespace TCC_VENDAS_SUPERMERCADO.Views
             this.ViewModel = new MasterViewModel(usuario);
         }
 
+
+        private void Button_Clicked_1(object sender, EventArgs e)
+        {
+            MessagingCenter.Send<Usuario>(new Usuario(), "EditarPerfil");
+        }
+
+        private void Button_Clicked_2(object sender, EventArgs e)
+        {
+            MessagingCenter.Send<Usuario>(new Usuario(), "MeusPedidos");
+        }
+
+        private void Button_Clicked_3(object sender, EventArgs e)
+        {
+            MessagingCenter.Send<Usuario>(new Usuario(), "MeuCarrinho");
+        }
     }
 }

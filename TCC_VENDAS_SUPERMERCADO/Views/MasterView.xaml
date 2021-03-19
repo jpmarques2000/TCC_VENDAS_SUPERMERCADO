@@ -8,9 +8,9 @@
            VerticalOptions="CenterAndExpand"
            Margin="15">
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                <Button Text="Perfil" Command="{Binding EditarPerfilCommand}"></Button>
-                <Button Text="Meus Pedidos" Command="{Binding MeusPedidoCommand}"></Button>
-                <Button Text="Carrinho" Command="{Binding MeuCarrinhoCommand}"></Button>
+                <Button Text="Perfil" Clicked="Button_Clicked_1"></Button>
+                <Button Text="Meus Pedidos" Clicked="Button_Clicked_2"></Button>
+                <Button Text="Carrinho" Clicked="Button_Clicked_3"></Button>
             </StackLayout>
         </Frame>
     </ContentPage>
