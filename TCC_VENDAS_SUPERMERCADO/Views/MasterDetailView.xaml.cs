@@ -40,7 +40,7 @@ namespace TCC_VENDAS_SUPERMERCADO.Views
                 {
                     this.Detail = new NavigationPage(
                         new MeusPedidosView());
-                    //  this.IsPresented = false;
+                      this.IsPresented = false;
                 });
 
             MessagingCenter.Subscribe<Usuario>(this, "MeuCarrinho",
