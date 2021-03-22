@@ -51,6 +51,14 @@ namespace TCC_VENDAS_SUPERMERCADO.Views
                     this.IsPresented = false;
                 });
 
+            MessagingCenter.Subscribe<Usuario>(this, "ListaProdutos",
+                (usuario) =>
+                {
+                    this.Detail = new NavigationPage(
+                        new ConsultaProdutosView());
+                    this.IsPresented = false;
+                });
+
         }
 
         private void CancelarAssinaturas()
@@ -58,6 +66,7 @@ namespace TCC_VENDAS_SUPERMERCADO.Views
             MessagingCenter.Unsubscribe<Usuario>(this, "EditarPerfil");
             MessagingCenter.Unsubscribe<Usuario>(this, "MeusPedidos");
             MessagingCenter.Unsubscribe<Usuario>(this, "MeuCarrinho");
+            MessagingCenter.Unsubscribe<Usuario>(this, "ListaProdutos");
         }
 
         protected override void OnDisappearing()

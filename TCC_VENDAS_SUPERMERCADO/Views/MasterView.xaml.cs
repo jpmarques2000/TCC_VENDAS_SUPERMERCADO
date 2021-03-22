@@ -37,5 +37,10 @@ namespace TCC_VENDAS_SUPERMERCADO.Views
         {
             MessagingCenter.Send<Usuario>(_usuario, "MeuCarrinho");
         }
+
+        private void Button_Clicked_4(object sender, EventArgs e)
+        {
+            MessagingCenter.Send<Usuario>(_usuario, "ListaProdutos");
+        }
     }
 }
