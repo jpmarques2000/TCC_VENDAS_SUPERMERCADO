@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:TCC_VENDAS_SUPERMERCADO.Converters"
              x:Class="TCC_VENDAS_SUPERMERCADO.Views.PerfilUsuarioView"
              Title="Perfil">
     <ContentPage.Content>
@@ -8,21 +9,32 @@
            VerticalOptions="CenterAndExpand"
            Margin="15">
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                <Label Text="Nome"></Label>
-                <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="Fill"></BoxView>
-                <Label Text="Email"></Label>
-                <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="Fill"></BoxView>
-                <Label Text="Rua"></Label>
-                <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="Fill"></BoxView>
-                <Label Text="Bairro"></Label>
-                <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="Fill"></BoxView>
-                <Label Text="Número"></Label>
-                <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="Fill"></BoxView>
-                <Label Text="CEP"></Label>
-                <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="Fill"></BoxView>
-                <Button Text="Editar">
+                <TableView>
+                    <TableRoot>
+                        <TableSection Title="Dados Pessoais">
+                            <EntryCell Placeholder="Nome" 
+                                           Text="{Binding Nome}"></EntryCell>
+                            <EntryCell Placeholder="Data de Nascimento" 
+                                           Text="{Binding DataNascimento}"></EntryCell>
+                            <EntryCell Placeholder="Telefone" 
+                                           Text="{Binding Telefone}"></EntryCell>
+                            <EntryCell Placeholder="E-mail" 
+                                           Text="{Binding Email}"></EntryCell>
+                            <EntryCell Placeholder="Rua" 
+                                           Text="{Binding Rua}"></EntryCell>
+                            <EntryCell Placeholder="Bairro" 
+                                           Text="{Binding Bairro}"></EntryCell>
+                            <EntryCell Placeholder="Numero" 
+                                           Text="{Binding Numero}"></EntryCell>
+                            <EntryCell Placeholder="Cep" 
+                                           Text="{Binding Cep}"></EntryCell>
+                        </TableSection>
+                    </TableRoot>
+                </TableView>
+                <Button Text="Editar" Command="{Binding SalvarCommand}" IsVisible="{Binding Editando}">
                 </Button>
-                <Button Text="Salvar"></Button>
+                <Button Text="Salvar" Command="{Binding EditarCommand}" IsVisible="{Binding Editando}">
+                </Button>
             </StackLayout>
         </Frame>
     </ContentPage.Content>
