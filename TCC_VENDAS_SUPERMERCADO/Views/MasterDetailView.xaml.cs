@@ -18,7 +18,7 @@ namespace TCC_VENDAS_SUPERMERCADO.Views
             InitializeComponent();
             this.usuario = usuario;
             this.Master = new MasterView(usuario);
-            this.Detail = new NavigationPage(new ConsultaProdutosView());
+            this.Detail = new NavigationPage(new ConsultaProdutosView(usuario));
         }
         protected override void OnAppearing()
         {
@@ -55,7 +55,7 @@ namespace TCC_VENDAS_SUPERMERCADO.Views
                 (usuario) =>
                 {
                     this.Detail = new NavigationPage(
-                        new ConsultaProdutosView());
+                        new ConsultaProdutosView(usuario));
                     this.IsPresented = false;
                 });
 
