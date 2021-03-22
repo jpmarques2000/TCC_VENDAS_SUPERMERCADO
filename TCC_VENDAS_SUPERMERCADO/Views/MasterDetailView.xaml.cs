@@ -31,7 +31,7 @@ namespace TCC_VENDAS_SUPERMERCADO.Views
                 (usuario) =>
                 {
                     this.Detail = new NavigationPage(
-                        new PerfilUsuarioView());
+                        new PerfilUsuarioView(usuario));
                     this.IsPresented = false;
                 });
 
