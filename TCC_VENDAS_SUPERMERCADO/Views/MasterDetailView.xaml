@@ -5,9 +5,6 @@
              x:Class="TCC_VENDAS_SUPERMERCADO.Views.MasterDetailView">
     <MasterDetailPage.Detail>
         <NavigationPage>
-            <x:Arguments>
-                <view:ConsultaProdutosView></view:ConsultaProdutosView>
-            </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>
 </MasterDetailPage>

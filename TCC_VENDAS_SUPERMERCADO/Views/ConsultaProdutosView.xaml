@@ -8,6 +8,6 @@
 
     <StackLayout Margin="25">
         <ListView x:Name="lv1"></ListView>
-        <Button Text="Meu Carrinho" HorizontalOptions="Center" VerticalOptions="EndAndExpand"></Button>
+        <Button Text="Meu Carrinho" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Clicked="Button_Clicked_1"></Button>
     </StackLayout>
 </ContentPage>

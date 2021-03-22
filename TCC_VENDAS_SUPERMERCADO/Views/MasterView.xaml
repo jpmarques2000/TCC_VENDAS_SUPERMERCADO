@@ -5,12 +5,13 @@
              Title = "Perfil">
     <ContentPage Title="Menu">
         <Frame OutlineColor ="Silver"
-           VerticalOptions="CenterAndExpand"
+           VerticalOptions="StartAndExpand"
            Margin="15">
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                 <Button Text="Perfil" Clicked="Button_Clicked_1"></Button>
                 <Button Text="Meus Pedidos" Clicked="Button_Clicked_2"></Button>
                 <Button Text="Carrinho" Clicked="Button_Clicked_3"></Button>
+                <Button Text="Produtos" Clicked="Button_Clicked_4"></Button>
             </StackLayout>
         </Frame>
     </ContentPage>

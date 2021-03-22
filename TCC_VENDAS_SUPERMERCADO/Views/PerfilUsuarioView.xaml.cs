@@ -11,7 +11,7 @@ using Xamarin.Forms.Xaml;
 namespace TCC_VENDAS_SUPERMERCADO.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PerfilUsuarioView : ContentPage
+    public partial class PerfilUsuarioView 
     {
         public PerfilUsuarioView(Usuario usuario)
         {
@@ -38,13 +38,13 @@ namespace TCC_VENDAS_SUPERMERCADO.Views
             MessagingCenter.Subscribe<Usuario>(this, "EditarPerfil",
                 (usuario) =>
                 {
-                 //   this.CurrentPage = this.Children[1];
+                    this.CurrentPage = this.Children[1];
                 });
 
             MessagingCenter.Subscribe<Usuario>(this, "SucessoSalvarUsuario",
                 (usuario) =>
                 {
-              //      this.CurrentPage = this.Children[0];
+                    this.CurrentPage = this.Children[0];
                 });
         }
 

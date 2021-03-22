@@ -1,10 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:converters="clr-namespace:TCC_VENDAS_SUPERMERCADO.Converters"
              x:Class="TCC_VENDAS_SUPERMERCADO.Views.PerfilUsuarioView"
              Title="Perfil">
-    <ContentPage.Content>
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <converters:NegativoConverter x:Key="negativo"></converters:NegativoConverter>
+        </ResourceDictionary>
+    </TabbedPage.Resources>
+    <ContentPage>
         <Frame OutlineColor ="Silver"
            VerticalOptions="CenterAndExpand"
            Margin="15">
@@ -31,11 +36,11 @@
                         </TableSection>
                     </TableRoot>
                 </TableView>
-                <Button Text="Editar" Command="{Binding SalvarCommand}" IsVisible="{Binding Editando}">
+                <Button Text="Editar" Command="{Binding SalvarCommand}" IsVisible="{Binding Editando, Converter={StaticResource Key=negativo}}">
                 </Button>
                 <Button Text="Salvar" Command="{Binding EditarCommand}" IsVisible="{Binding Editando}">
                 </Button>
             </StackLayout>
         </Frame>
-    </ContentPage.Content>
-</ContentPage>
+    </ContentPage>
+</TabbedPage>
