@@ -40,12 +40,15 @@ namespace TCC_VENDAS_SUPERMERCADO.Views
 
         protected override void OnAppearing()
         {
-            //  this.ViewModel.GetProdutos();
+            base.OnAppearing();
+            
         }
 
         protected override void OnDisappearing()
         {
-          //  base.OnDisappearing();
+            base.OnDisappearing();
         }
+
+
     }
 }

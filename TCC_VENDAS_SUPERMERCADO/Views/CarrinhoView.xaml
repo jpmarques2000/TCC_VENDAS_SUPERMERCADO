@@ -2,12 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TCC_VENDAS_SUPERMERCADO.Views.CarrinhoView"
+             xmlns:vm="clr-namespace:TCC_VENDAS_SUPERMERCADO.ViewModels"
              Title="Meu Carrinho">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Meu Carrinho"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <ListView x:Name="listViewPedido" ItemsSource="{Binding Produto}" SelectedItem="{Binding ProdutoSelecionado}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal">
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Meu Carrinho" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Clicked="Button_Clicked_1"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
