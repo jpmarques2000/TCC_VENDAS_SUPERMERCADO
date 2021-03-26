@@ -5,21 +5,32 @@
              xmlns:vm="clr-namespace:TCC_VENDAS_SUPERMERCADO.ViewModels"
              Title="Produtos">
     <StackLayout Margin="25">
-        <ListView x:Name="listViewProdutos" ItemsSource="{Binding Produto}">
+        <ListView x:Name="listViewProdutos" ItemsSource="{Binding Produto}"
+                  HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <ViewCell.View>
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding nome}" FontSize="20" VerticalTextAlignment="Center"></Label>
-                                <Label Text=" - " VerticalTextAlignment="Center"></Label>
-                                <Label Text="{Binding PrecoFormatado}" FontAttributes="Bold" VerticalTextAlignment="Center"></Label>
+                        <Grid Padding="8">
+                            <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                           
+                                <Image Source="" VerticalOptions="Start" WidthRequest="100" HeightRequest="100"></Image>
+                            <StackLayout Grid.Column="1">
+                                <Label FontAttributes="Bold" VerticalOptions="Center" Text="{Binding nome}" FontSize="20"></Label>
+                                <Label FontAttributes="Bold" FontSize="14" Text="descriçao do produto ....... " VerticalOptions="Center"></Label>
+                                <Label Text="{Binding PrecoFormatado}" FontAttributes="Bold" VerticalOptions="Center"></Label>
+                                <Stepper x:Name="stepperProdutos" HeightRequest="40" Scale="0.6" HorizontalOptions="End" Minimum="0" Maximum="99" Increment="1"></Stepper>
+                                
                             </StackLayout>
-                        </ViewCell.View>
+                       
+                        </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
         <Button Text="Meu Carrinho" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Clicked="Button_Clicked_1"></Button>
+
     </StackLayout>
 </ContentPage>
