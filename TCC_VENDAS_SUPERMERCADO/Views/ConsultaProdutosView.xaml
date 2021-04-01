@@ -3,34 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TCC_VENDAS_SUPERMERCADO.Views.ConsultaProdutosView"
              xmlns:vm="clr-namespace:TCC_VENDAS_SUPERMERCADO.ViewModels"
-             xmlns:models="clr-namespace:TCC_VENDAS_SUPERMERCADO.Models"
              Title="Produtos">
+    
     <StackLayout Margin="25">
-        <ListView x:Name="listViewProdutos" ItemsSource="{Binding Produto}"
-                  HasUnevenRows="True">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid Padding="8">
-                            <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"></ColumnDefinition>
-                            <ColumnDefinition Width="*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                           
-                                <Image Source="" VerticalOptions="Start" WidthRequest="100" HeightRequest="100"></Image>
-                            <StackLayout Grid.Column="1">
-                                <Label FontAttributes="Bold" VerticalOptions="Center" Text="{Binding nome}" FontSize="20"></Label>
-                                <Label FontAttributes="Bold" FontSize="14" Text="descriçao do produto ....... " VerticalOptions="Center"></Label>
-                                <Label Text="{Binding PrecoFormatado}" FontAttributes="Bold" VerticalOptions="Center"></Label>
-                                <models:CustomStepper></models:CustomStepper>
-                                
-                            </StackLayout>
-                       
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
+
+        <ListView ItemTemplate="{StaticResource ProdutoItemTemplate}" ItemsSource="{Binding Produtos}" HasUnevenRows="True">
+            
         </ListView>
+        <Button Text="TESTE"></Button>
+
+
+
+
         <Button Text="Meu Carrinho" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Clicked="Button_Clicked_1"></Button>
 
     </StackLayout>

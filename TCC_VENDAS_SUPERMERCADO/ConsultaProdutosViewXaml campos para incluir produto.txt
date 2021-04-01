@@ -1,0 +1,9 @@
+﻿        <Entry x:Name="txtProdutoId" Placeholder="Id"></Entry>
+        <Entry x:Name="txtNome" Placeholder="Informe o nome"></Entry>
+        <Entry x:Name="txtPreco" Placeholder="Informe o preco"></Entry>
+        <Entry x:Name="txtPromocao" Placeholder="esta em promocao"></Entry>
+        <Entry x:Name="txtPrecopromocao" Placeholder="preco promocional"></Entry>
+        <Entry x:Name="txtEstoque" Placeholder="estoque"></Entry>
+
+
+        <Button x:Name="btnIncluir" WidthRequest="200" Text="Incluir" BackgroundColor="Aqua" Clicked="btnIncluir_Clicked"/>
