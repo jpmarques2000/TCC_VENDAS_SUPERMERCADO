@@ -19,18 +19,18 @@ namespace TCC_VENDAS_SUPERMERCADO.ViewModels
             this.Produtos = new ObservableCollection<Produto>();
         }
 
-        public List<Produto> GetProdutos()
-        {
-            var produtosList = new List<Produto>();
+        //public List<Produto> GetProdutos()
+        //{
+        //    var produtosList = new List<Produto>();
 
-            produtosList.AddRange(new[] {
-                new Produto(1,"Pacoca",1.50),
-                new Produto(2,"Batata", 2.50),
-                new Produto(3,"Batata", 2.50),
-                new Produto(4,"Batata", 2.50),
-                new Produto(5,"Batata", 2.50)
-            });
-            return produtosList;
-        }
+        //    produtosList.AddRange(new[] {
+        //        new Produto(1,"Pacoca",1.50,123,false,1.25,100),
+        //        new Produto(2,"Pacoca",1.50,123,false,1.25,100),
+        //        new Produto(3,"Pacoca",1.50,123,false,1.25,100),
+        //        new Produto(4,"Pacoca",1.50,123,false,1.25,100),
+        //        new Produto(5,"Pacoca",1.50,123,false,1.25,100)
+        //    });
+        //    return produtosList;
+        //}
     }
 }
